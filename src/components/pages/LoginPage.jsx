@@ -27,6 +27,7 @@ const LoginPage = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
+        console.log(`${import.meta.VITE_API_BASE_URL}/api/login`)
         const response = await fetch(`${import.meta.VITE_API_BASE_URL}/api/login`, {
             method: 'POST',
             headers:  {
