@@ -18,7 +18,7 @@ const RegisterPage = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
-        const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/register/`,{
+        const response = await fetch(`https://tasktorch-todoapp.onrender.com/api/register/`,{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

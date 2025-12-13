@@ -10,7 +10,7 @@ const TaskPage = () => {
     const navigate = useNavigate();
 
     const fetchTodo = async () => {
-        const response = await fetch(`${import.meta.VITE_API_BASE_URL}/api/todos/${id}/`, {
+        const response = await fetch(`https://tasktorch-todoapp.onrender.com/api/todos/${id}/`, {
             method: "GET",
             headers: {
                 'Authorization': `Token ${token}`
@@ -27,7 +27,7 @@ const TaskPage = () => {
 
     const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch(`${import.meta.VITE_API_BASE_URL}/api/todos/${id}/`,{
+    const response = await fetch(`https://tasktorch-todoapp.onrender.com/api/todos/${id}/`,{
         method: "PATCH",
         headers: {
             "Content-Type": "application/json",
@@ -46,7 +46,7 @@ const TaskPage = () => {
     const confirm = window.confirm("Are you sure you wanna delete this?");
     if (!confirm) return;
     else {
-        const response = await fetch(`${import.meta.VITE_API_BASE_URL}/api/todos/${id}/`, {
+        const response = await fetch(`https://tasktorch-todoapp.onrender.com/api/todos/${id}/`, {
             method: "DELETE",
             headers: {
             'Authorization': `Token ${token}`
@@ -61,7 +61,7 @@ const TaskPage = () => {
     }
 
     const handleCheck = async (todo) => {
-    const response = await fetch(`${import.meta.VITE_API_BASE_URL}/api/todos/${id}/`, {
+    const response = await fetch(`https://tasktorch-todoapp.onrender.com/api/todos/${id}/`, {
         method: 'PATCH',
         headers: {
         'Content-Type': 'application/json',

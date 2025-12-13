@@ -8,7 +8,7 @@ const TasksPage = () => {
   const [todos, setTodos] = useState([]);
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch(`${import.meta.VITE_API_BASE_URL}/api/todos/`,{
+    const response = await fetch(`https://tasktorch-todoapp.onrender.com/api/todos/`,{
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -24,7 +24,7 @@ const TasksPage = () => {
   }
 
   const fetchTodos = async () => {
-    const response = await fetch(`${import.meta.VITE_API_BASE_URL}/api/todos/`, {
+    const response = await fetch(`https://tasktorch-todoapp.onrender.com/api/todos/`, {
       method: "GET",
       headers: {
         "Content-Type": 'application/json',
@@ -39,7 +39,7 @@ const TasksPage = () => {
     fetchTodos();
   }, [])
   const handleCheck = async (id, completed) => {
-    const response = await fetch(`${import.meta.VITE_API_BASE_URL}/api/todos/${id}/`, {
+    const response = await fetch(`https://tasktorch-todoapp.onrender.com/api/todos/${id}/`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -58,7 +58,7 @@ const TasksPage = () => {
     const confirm = window.confirm("Are you sure you wanna delete this?");
     if (!confirm) return;
     else {
-      const response = await fetch(`${import.meta.VITE_API_BASE_URL}/api/todos/${id}/`, {
+      const response = await fetch(`https://tasktorch-todoapp.onrender.com/api/todos/${id}/`, {
         method: "DELETE",
         headers: {
           'Authorization': `Token ${token}`
