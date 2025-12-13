@@ -50,6 +50,7 @@ const RegisterPage = () => {
             className='bg-white text-black p-6 w-full h-full flex flex-col justify-center
             rounded-lg relative
             '
+            method="POST"
             >
             <h1 className='w-[60%] md:w-fit h-[60px] md:h-[80px] absolute top-0 left-1/2 transform -translate-x-1/2 text-xl md:text-3xl font-bold mb-2
             text-white border p-6 rounded-xl bg-gradient-to-r from-stone-600 via-stone-500 to-stone-800 flex justify-center items-center
